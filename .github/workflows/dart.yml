@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 #The type of machine to run the job on. [windows,macos, ubuntu , self-hosted]
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     container:
       image:  google/dart:latest
