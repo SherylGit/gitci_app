@@ -27,15 +27,21 @@ jobs:
     - uses: actions/subosito/flutter-action@v1
       with:
         flutter-version: '1.20.2'
-        channel: 'dev'
+        #channel: 'dev'
     - run: flutter pub get
     - run: flutter  analyze
     # run  flutter widgets tests  and unit tests
-    - run: flutter test --coverage
+    #- run: flutter test --coverage
+    - run: flutter build apk --split-per-abi
+    # - name: Release apk
+    #   uses: ncipollo/release-action@v1
+    #   with:
+    #     artifacts: "build/app/outputs/apk/release/*.apk"
+
     # Upload coverage reports to Codecov
       # https://github.com/marketplace/actions/codecov
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1.0.13
-      with:
-        #token: ${{ secrets.CODECOV_TOKEN }}
-        file: coverage/lcov.info
+    # - name: Upload coverage to Codecov
+    #   uses: codecov/codecov-action@v1.0.13
+    #   with:
+    #     #token: ${{ secrets.CODECOV_TOKEN }}
+    #     file: coverage/lcov.info
