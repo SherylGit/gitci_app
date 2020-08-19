@@ -32,7 +32,7 @@ jobs:
     - run: flutter  analyze
     # run  flutter widgets tests  and unit tests
     #- run: flutter test --coverage
-    - run: flutter build apk --split-per-abi
+    # - run: flutter build apk --split-per-abi
     # - name: Release apk
     #   uses: ncipollo/release-action@v1
     #   with:
