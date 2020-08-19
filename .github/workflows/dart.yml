@@ -9,7 +9,8 @@ on:
 jobs:
   build:
 #The type of machine to run the job on. [windows,macos, ubuntu , self-hosted]
-    runs-on: macos-latest
+    # runs-on: macos-latest
+    runs-on: ubuntu-latest
     #container:
      # image: google/dart:latest
 
@@ -31,7 +32,9 @@ jobs:
     - run: flutter pub get
     - run: flutter  analyze
     # run  flutter widgets tests  and unit tests
-    #- run: flutter test --coverage
+    # - run: flutter test --coverage
+    - run: flutter test test/unit_test.dart
+    - run: flutter test test/widget_test.dart
     # - run: flutter build apk --split-per-abi
     # - name: Release apk
     #   uses: ncipollo/release-action@v1
