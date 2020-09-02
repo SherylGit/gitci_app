@@ -27,10 +27,7 @@ jobs:
   # https://github.com/marketplace/actions/flutter-action
     - uses: subosito/flutter-action@v1
       with:
-<<<<<<< HEAD
         #flutter-version: '1.20.2'
-=======
->>>>>>> ee7f7af78271dd38d26e46f8e1effcbeb48b3406
         flutter-version: '1.9.1+hotfix.6'
         #channel: 'dev'
     - run: flutter upgrade
@@ -38,15 +35,8 @@ jobs:
     - run: flutter  analyze
     # run  flutter widgets tests  and unit tests
     # - run: flutter test --coverage
-<<<<<<< HEAD
     - run: flutter test test/unit_test.dart
     - run: flutter test test/widget_test.dart
-=======
-    - run: flutter test
-    #- run: flutter test test/unit_test.dart
-    #- run: flutter test test/widget_test.dart
-    - run: flutter build apk
->>>>>>> ee7f7af78271dd38d26e46f8e1effcbeb48b3406
     # - run: flutter build apk --split-per-abi
     # - name: Release apk
     #   uses: ncipollo/release-action@v1
